@@ -17,7 +17,7 @@ function sayname() {
 
 function loginuser(username)
 {
-    if (username === undefined)
+    if (!username)
     {
         console.log("Please enter your name")
         return
