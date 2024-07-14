@@ -14,16 +14,8 @@ function sayname() {
 // const result = addnum(3,7)
 // console.log(result)
 
-
-function loginuser(username)
-{
-    if (!username)
-    {
-        console.log("Please enter your name")
-        return
-    }
-        return `${username} just logged in`
-    
+function calcartprice(...num1){
+    return num1
 }
 
-console.log(loginuser("Jenin"))
+console.log(calcartprice(2, 4, 5))
