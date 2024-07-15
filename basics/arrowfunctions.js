@@ -27,11 +27,17 @@
 
 // how to use arrow function
 
-const addnum = (num1, num2) => {
-    return num1 + num2
-}
-console.log(addnum(7,6))
+// const addnum = (num1, num2) => {
+//     return num1 + num2
+// }
+// console.log(addnum(7,6))
 
 // implicit way of writing arrow functions
-const num = (num1, num2) => num1 + num2
-console.log(num(4,29))
+// const num = (num1, num2) => num1 + num2
+// console.log(num(4,29))
+
+// to declare a object in arrowfunction
+
+// const obj = () => ({username: "jenin"})
+// console.log(obj())
+
