@@ -31,3 +31,7 @@ const addnum = (num1, num2) => {
     return num1 + num2
 }
 console.log(addnum(7,6))
+
+// implicit way of writing arrow functions
+const num = (num1, num2) => num1 + num2
+console.log(num(4,29))
