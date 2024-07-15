@@ -43,15 +43,15 @@
 
 // how to call array in function
 
-// const myarr = [100,55,564,54]
+const myarr = [100,55,564,54]
 
-// function returnarray (getArray)
-// {
-//     return getArray[2];
-// }
+function returnarray (getArray)
+{
+    return getArray[2];
+}
 
 // first method 
-// console.log(returnarray(myarr));
+console.log(returnarray(myarr));
 
 // second method
 // console.log(returnarray([100,500,763,656]))
