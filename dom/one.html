@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: azure;
+        }
+    </style>
 </head>
-<body>
-    <div> class = "bg-black"
-        <h1 id="title"> hello</h1>
+<body class = "bg-black">
+    <div>
+        <h1 id="title" class="heading"> hello  <span style="display: none;">Testing</span></h1>
+        <h1>Lorem, ipsum dolor.</h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h3>Lorem, ipsum dolor.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cumque fugiat nostrum beatae iste voluptatem accusantium ipsum, illo, dolorum magni quas eligendi ipsam sed labore molestias nesciunt reprehenderit expedita rerum!</p>
+
+        <ul>
+            <li class="l1">one </li>
+            <li class="l1">two</li>
+            <li class="l1">three</li>
+            <li class="l1">four</li>
+            <li class="l1">five</li>
+        </ul>
     </div>
     
 </body>
@@ -35,4 +53,10 @@ console.dir(document) : to view all the details of window document
         text node     attribute      attribute <- h1       p
                                                  /          \
                                             text node    text node
--->
+
+innerhtml: it shows all code that is present in the id and it also helps to work with html tags that are present in the id
+textcontent: it shows all the text that in webpage and also the hidden text with the help of styling properties
+innertext: it only shows the test that are visible in webpage
+
+
+                                            -->
