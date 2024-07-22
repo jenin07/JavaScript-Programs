@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="lang">
+        <li>java</li>
+    </ul>
+</body>
+
+<script>
+
+    // creating a function to add list to the ul element in webpage 
+    function addlang(langname) {
+        const list = document.createElement("li")
+        list.innerHTML = langname
+        document.querySelector('.lang').appendChild(list)
+    }
+
+    // addlang("cpp")
+    // addlang("python")
+
+    //optimized approach
+    function addoptilang (langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addoptilang("cpp")
+    addoptilang("c")
+
+    // how to edit the element
+
+    const num = document.querySelector('li:nth-child(2)') // assign the values that you need to change into a variable
+    // num.innerHTML = "python" //normal approach
+    const newli = document.createElement('li') //create a new var for li
+    newli.textContent = "python"
+    num.replaceWith(newli) // use replacewith func with num to replace the values that you have assigned to newli with the help of textcontent  
+
+    //another edit method
+    const secnum = document.querySelector('li:first-child')
+    secnum.outerHTML = '<li>Typescript</li>'
+    
+
+    //removing a element
+    const lastnum = document.querySelector("li:last-child")
+    lastnum.remove()  
+
+
+
+</script>
+
+</html>
