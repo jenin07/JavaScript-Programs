@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id= 'h1'>world</h1>
+    <button id='start'> start </button>
+    <button id='stop'>stop</button>
+</body>
+<script>
+
+    
+    const name = function (str){
+        console.log(str, Date.now())
+    }
+
+    let time;
+
+    document.querySelector('#start').addEventListener('click', function(){
+        console.log("started");
+        time = setInterval(name, 2000, "hi");
+        
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        console.log("Stopped");
+        clearInterval(time)
+    }) 
+</script>  
+</html>
