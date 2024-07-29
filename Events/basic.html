@@ -23,20 +23,20 @@
     //     alert('owl')
     // }
 
-    document.getElementById('images').addEventListener('click', function (e){
-        console.log("clicked");
-    }, false )
+    // document.getElementById('images').addEventListener('click', function (e){
+    //     console.log("clicked");
+    // }, false )
 
-    document.getElementById('owl').addEventListener('click', function (e){
-        console.log("owl");
-        e.stopPropagation();
-    }, false ) 
+    // document.getElementById('owl').addEventListener('click', function (e){
+    //     console.log("owl");
+    //     e.stopPropagation(); // to stop event bubbling
+    // }, false ) 
 
 
-    document.getElementById('google').addEventListener('click', function(e) {
-        e.preventDefault();
-        console.log("clicked")
-    }, false)
+    // document.getElementById('google').addEventListener('click', function(e) {
+    //     e.preventDefault();  
+    //     console.log("google")
+    // }, false)
 
     // type of events
     // type, time, defaultprevented, target, toeElement, srcElment, currentTarget, clientX , clientY, screenx, screenY, altkey, ctrlKey, shiftKey, KeyCode
@@ -47,6 +47,21 @@
 
     // event bubbling goes from inside to outside
     // event capturing goes from outside to inside
+
+
+    // how to remove the images from the webpage after clicking
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === 'IMG')
+    {
+        let removeit  = e.target.parentNode;
+        removeit.remove();
+    }
+        
+        // removeit.parentNode.removeChild(removeit);
+    }, false)
+
 
     
 </script>
