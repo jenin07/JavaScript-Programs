@@ -41,7 +41,12 @@ power.hello(); //it will not return the value as power is an object datatype and
 
 //inheritance
 
-const techer =  {
+const user = {
+    name: "chai",
+    work: "google"
+}
+
+const teacher =  {
     video: true
 }
 const support = {
@@ -52,3 +57,9 @@ const tasup ={
     fulltime: true,
     __proto__: support
 }
+
+// old approach
+teacher.__proto__ = user
+
+// new approach
+Object.setPrototypeOf(support, teacher)
