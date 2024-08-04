@@ -6,20 +6,65 @@
     <title>closure</title>
 </head>
 <body>
-    
+    <button id="orange">orange</button>
+    <button id="green">green</button>
 </body>
 
 <script>
-    function init(){
+
+    // lexical scoping
+    // in this inner function can access the values from outer function for eg name is diplayed in the inner function 
+    // function init(){
+    //     let name = "chrome";
+
+    //     function displayName(){
+    //         console.log(name);
+            
+    //     }
+    //     displayName();
+    // }
+
+    // displayName();
+    // init();
+
+    // closure 
+
+    function make(){
         let name = "chrome";
 
         function displayName(){
             console.log(name);
             
         }
-        displayName();
+        return displayName;
     }
 
-    init();
+
+    const exam = make();
+    exam();
+
+</script>
+    
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    function clickhandler(color){
+        // document.body.style.backgroundColor = `${color}`
+    // use of closure
+        return function (){
+            document.body.style.backgroundColor = `${color}`
+        }
+    
+    }
+
+    document.getElementById('orange').onclick = clickhandler("orange")
+    document.getElementById('green').onclick = clickhandler("green")
+
 </script>
 </html>
